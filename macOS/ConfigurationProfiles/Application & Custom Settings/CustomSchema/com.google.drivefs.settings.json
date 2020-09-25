@@ -1,0 +1,186 @@
+{
+	"title": "com.google.drivefs.settings",
+	"description": "Set these name and value pairs using the registry keys or defaults command, as described above. On Windows, create the registry keys if they don't already exist. On macOS, the defaults command maintains a plist file for settings. You should not modify the plist file directly, as some changes might not be applied.",
+	"properties": {
+        "DefaultMountPoint": {
+            "title": "DefaultMountPoint",
+            "description": "macOS—Set the mounted drive path. You can include tilde (~) or environment variables in the path.",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "MinFreeDiskSpaceKBytes": {
+            "title": "MinFreeDiskSpaceKBytes",
+            "description": "Controls the amount of local space used by Drive File Stream's cache. Stops writing content to the disk when free disk space gets below this threshold, in kilobytes.",
+            "property_order": 10,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "DisableOutlookPlugin": {
+            "title": "DisableOutlookPlugin",
+            "description": "Disables the Microsoft Outlook Google Drive attachment plugin that's bundled with Drive File Stream.",
+            "property_order": 15,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "BandwidthTxKBPS": {
+            "title": "BandwidthTxKBPS",
+            "description": "Maximum upstream kilobytes per second.",
+            "property_order": 20,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "DisableCRLCheck": {
+            "title": "DisableCRLCheck",
+            "description": "This disables checking Certificate Revocation Lists (CRLs) provided by certificate authorities. If not explicitly set, this defaults to true if TrustedRootCertsFile is provided, otherwise false. Sites that use self-signed certificates for their content inspection proxies typically don’t provide a CRL. Enterprises that specify a CRL in their proxy certificate can explicitly set DisableCRLCheck to 0 for the added check.",
+            "property_order": 25,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DirectConnection": {
+            "title": "DirectConnection",
+            "description": "This bypasses proxy configurations. ",
+            "property_order": 30,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "AutoStartOnLogin": {
+            "title": "AutoStartOnLogin",
+            "description": "Start Drive File Stream automatically on session login.",
+            "property_order": 35,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "BandwidthRxKBPS": {
+            "title": "BandwidthRxKBPS",
+            "description": "Maximum downstream kilobytes per second.",
+            "property_order": 40,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "ForceBrowserAuth": {
+            "title": "ForceBrowserAuth",
+            "description": "Use browser authentication. If your organization uses security keys or SSO, this setting may resolve sign-in problems.",
+            "property_order": 45,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableRealTimePresence": {
+            "title": "DisableRealTimePresence",
+            "description": "Disables real-time presence in Microsoft Office. This can also be disabled for organizational units from the Admin console. See step 4 of Deploy Drive File Stream.",
+            "property_order": 50,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableMeetOutlookPlugin": {
+            "title": "DisableMeetOutlookPlugin",
+            "description": "Available with Drive File Stream version 39 and later.  Disables the Microsoft Outlook Meet plugin that's bundled with Drive File Stream.",
+            "property_order": 55,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ContentCacheMaxKbytes": {
+            "title": "ContentCacheMaxKbytes",
+            "description": "Sets the limit on content cache size in kilobytes. The limit is capped at 20% of the available space on the hard drive (regardless of the setting value).The setting does not apply to files made available offline or files that are in the process of uploading.  This setting is only available for admins, as an override or host-wide setting",
+            "property_order": 60,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "ContentCachePath": {
+            "title": "ContentCachePath",
+            "description": "Sets the path to the content cache location on a connected APFS, HFS+, or NTFS file system. When Drive File Stream restarts, local data in the old content cache will move to the new content cache location. If you delete your custom setting, data will move back to the default location.  The default cache location is: ~/Library/Application Support/Google/DriveFS  Warning: Be cautious about clearing the Drive File Stream cache to try to fix general problems. Files are moved here before they're uploaded. If you clear the cache before an upload is complete, that file will be lost.",
+            "property_order": 65,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "TrustedRootCertsFile": {
+            "title": "TrustedRootCertsFile",
+            "description": "This is the full path to an alternate file to use for validating host SSL certificates. It must be in Privacy Enhanced Mail (PEM) format. Set this if your users are on networks with decrypting proxies.The file should contain the contents of the roots.pem file shipped with Drive File Stream, plus the certificates used to authenticate your proxy. These additions should correspond to the proxy-signing certificates you added to the certificate stores in your fleet of machines. You can find roots.pem in: /Applications/Google Drive File Stream.app/Contents/Resources/roots.pem (macOS) Only settable host-wide.",
+            "property_order": 70,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisableSSLValidation": {
+            "title": "DisableSSLValidation",
+            "description": "This disables validating SSL traffic. Traffic will still be encrypted, but we will not validate that the SSL certificates of the upstream servers are all valid. This is inherently insecure. It would allow a man-in-the-middle attack against traffic to Google Drive. Only settable host-wide.",
+            "property_order": 75,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        }
+	}
+}
