@@ -1,0 +1,882 @@
+{
+	"title": "us.zoom.config",
+	"description": "Settings can be enforced and/or set as just the default settings, which the end-user can still modify after deployment. ",
+	"properties": {
+        "ZAutoUpdate": {
+            "title": "ZAutoUpdate",
+            "description": "Allow updates through the client by users",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "legacycapturemode": {
+            "title": "legacycapturemode",
+            "description": "Disables GPU acceleration",
+            "property_order": 10,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "nosso": {
+            "title": "nosso",
+            "description": "Disable SSO login option",
+            "property_order": 15,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "embeduseragentstring": {
+            "title": "embeduseragentstring",
+            "description": "Allows embedding text in the Zoom using agent, for tracking",
+            "property_order": 20,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "ZDualMonitorOn": {
+            "title": "ZDualMonitorOn",
+            "description": "Automatically enable dual monitor ",
+            "property_order": 25,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "enablehidcontrol": {
+            "title": "enablehidcontrol",
+            "description": "Enables HID control of USB audio devices from the Zoom client",
+            "property_order": 30,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZAutoFitWhenViewShare": {
+            "title": "ZAutoFitWhenViewShare",
+            "description": "Automatically fit to window when viewing shared content ",
+            "property_order": 35,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "zdisableft": {
+            "title": "zdisableft",
+            "description": "Disables file transfer  ",
+            "property_order": 40,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableLinkPreviewInChat": {
+            "title": "DisableLinkPreviewInChat",
+            "description": "Disable Link Preview",
+            "property_order": 45,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "login_domain": {
+            "title": "login_domain",
+            "description": "Set the email address domain that users can login with",
+            "property_order": 50,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "zdisablelocalrecord": {
+            "title": "zdisablelocalrecord",
+            "description": "Disables Local Recording from the Zoom Client",
+            "property_order": 55,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnableIndependentDataPort": {
+            "title": "EnableIndependentDataPort",
+            "description": "Split traffic across different ports for easier identification Video share: 8801 Screensharing: 8802 Audio: 880",
+            "property_order": 60,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableScreenShare": {
+            "title": "DisableScreenShare",
+            "description": "Disable Screen Share when starting or joining a meeting",
+            "property_order": 65,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "keepsignedin": {
+            "title": "keepsignedin",
+            "description": "Client automatically logs in to the last account used",
+            "property_order": 70,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "disablecomputeraudio": {
+            "title": "disablecomputeraudio",
+            "description": "Disable use of computer audio on the Zoom Client",
+            "property_order": 75,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "zdisableannotation": {
+            "title": "zdisableannotation",
+            "description": "Disables annotation when screen-sharing or viewing a screen share",
+            "property_order": 80,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "enablestartmeetingwithroomsystem": {
+            "title": "enablestartmeetingwithroomsystem",
+            "description": "Displays the (Call Room System) button on the home screen of the Zoom app",
+            "property_order": 85,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "account": {
+            "title": "account",
+            "description": "Set account IDs that client is restricted to join a meeting hosted by specific Account ID numbers ",
+            "property_order": 90,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "enableshareaudio": {
+            "title": "enableshareaudio",
+            "description": "Allows the sharing of audio only when screen sharing",
+            "property_order": 95,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "presenttoroomwithaudio": {
+            "title": "presenttoroomwithaudio",
+            "description": "Allows presenting to a Zoom Room with audio content",
+            "property_order": 100,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnableSpotlightSelf": {
+            "title": "EnableSpotlightSelf",
+            "description": "Enables spotlight of your video when speaking",
+            "property_order": 105,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ConfirmWhenLeave": {
+            "title": "ConfirmWhenLeave",
+            "description": "Confirm before leaving a meeting",
+            "property_order": 110,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnableRemindMeetingTime": {
+            "title": "EnableRemindMeetingTime",
+            "description": "Enables a reminder for upcoming meetings",
+            "property_order": 115,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "enableoriginalsound": {
+            "title": "enableoriginalsound",
+            "description": "Enable Orginal Sound for audio",
+            "property_order": 120,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "disableloginwithemail": {
+            "title": "disableloginwithemail",
+            "description": "Disable Email login option",
+            "property_order": 125,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "proxypac": {
+            "title": "proxypac",
+            "description": "Set proxy server to client with PAC URL for the Zoom Client ",
+            "property_order": 130,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "appendcallernameforroomsystem": {
+            "title": "appendcallernameforroomsystem",
+            "description": "Adds participant names when viewing a room systems video feed",
+            "property_order": 135,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "nogoogle": {
+            "title": "nogoogle",
+            "description": "Disable Google login option",
+            "property_order": 140,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZUse720PByDefault": {
+            "title": "ZUse720PByDefault",
+            "description": "Enable HD Video by default",
+            "property_order": 145,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "disablevirtualbkgnd": {
+            "title": "disablevirtualbkgnd",
+            "description": "Disables use of the Virtual Background feature",
+            "property_order": 150,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZAutoFullScreenWhenViewShare": {
+            "title": "ZAutoFullScreenWhenViewShare",
+            "description": "Automatically enter full screen when viewing shared content ",
+            "property_order": 155,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "disabledirectshare": {
+            "title": "disabledirectshare",
+            "description": "Disables the direct share option in the Zoom client",
+            "property_order": 160,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DefaultUsePortraitView": {
+            "title": "DefaultUsePortraitView",
+            "description": "Default to Portrait Mode upon opening Zoom",
+            "property_order": 165,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "disablewhiteboard": {
+            "title": "disablewhiteboard",
+            "description": "Disables the use of the Whiteboard feature in-meeting",
+            "property_order": 170,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnableEchoCancellation": {
+            "title": "EnableEchoCancellation",
+            "description": "Enables echo cancellation for the microphone audio ",
+            "property_order": 175,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "bandwidthlimitup": {
+            "title": "bandwidthlimitup",
+            "description": "Limit the Maximum amount of bandwidth by the Mac client ",
+            "property_order": 180,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "EnableSSLVerification": {
+            "title": "EnableSSLVerification",
+            "description": "The Zoom Client will verify the server certificate",
+            "property_order": 185,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZAutoSSOLogin": {
+            "title": "ZAutoSSOLogin",
+            "description": "Default to login with SSO",
+            "property_order": 190,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "blockuntrustedsslcert": {
+            "title": "blockuntrustedsslcert",
+            "description": "The client will block connections to untrusted SSL certificates",
+            "property_order": 195,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "enablesharevideo": {
+            "title": "enablesharevideo",
+            "description": "Allows sharing of video clips when screen sharing",
+            "property_order": 200,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "LastLoginType": {
+            "title": "LastLoginType",
+            "description": "Remember the last login type used",
+            "property_order": 205,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "FullScreenWhenJoin": {
+            "title": "FullScreenWhenJoin",
+            "description": "Full Screen when starting or joining a meeting",
+            "property_order": 210,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "AutoHideToolbar": {
+            "title": "AutoHideToolbar",
+            "description": "Always show meeting controls (Disable auto-hide toolbar)",
+            "property_order": 215,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "recordpath": {
+            "title": "recordpath",
+            "description": "Set path for local meeting recording files",
+            "property_order": 220,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "min2tray": {
+            "title": "min2tray",
+            "description": "Automatically minimizes the Zoom client to the Dock when the app is closed",
+            "property_order": 225,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "forcessourl": {
+            "title": "forcessourl",
+            "description": "Configures and locks the SSO URL ",
+            "property_order": 230,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "disableremotesupport": {
+            "title": "disableremotesupport",
+            "description": "Disables 1:1 remote support when screen sharing",
+            "property_order": 235,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "enablesplitscreen": {
+            "title": "enablesplitscreen",
+            "description": "Enables side-by-side mode by default ",
+            "property_order": 240,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "zdisablesendvideo": {
+            "title": "zdisablesendvideo",
+            "description": "Disable sending video from the Zoom Client",
+            "property_order": 245,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "proxybypass": {
+            "title": "proxybypass",
+            "description": "Set proxy bypass rule for the Zoom Client",
+            "property_order": 250,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "setwebdomain": {
+            "title": "setwebdomain",
+            "description": "Sets the web domain for logging in or joining a meeting, by default the values is https://zoom.us or https://zoom.com",
+            "property_order": 255,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "ZHideNoVideoUser": {
+            "title": "ZHideNoVideoUser",
+            "description": "Hide non-video participants by default",
+            "property_order": 260,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "MuteVoipWhenJoin": {
+            "title": "MuteVoipWhenJoin",
+            "description": "Always mute microphone when joining a meeting",
+            "property_order": 265,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "usepmi": {
+            "title": "usepmi",
+            "description": "Always use PMI for instant meetings",
+            "property_order": 270,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "setusesystemdefaultmicforvoip": {
+            "title": "setusesystemdefaultmicforvoip",
+            "description": "Uses the system default speaker when using microphone audio",
+            "property_order": 275,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "bandwidthlimitdown": {
+            "title": "bandwidthlimitdown",
+            "description": "Limit the Minimum amount of bandwidth used by the Macclient",
+            "property_order": 280,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "EnableMirrorEffect": {
+            "title": "EnableMirrorEffect",
+            "description": "Enable mirroring of shared video",
+            "property_order": 285,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "setusesystemdefaultspeakerforvoip": {
+            "title": "setusesystemdefaultspeakerforvoip",
+            "description": "Uses the system default speaker when using computer audio",
+            "property_order": 290,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "proxy": {
+            "title": "proxy",
+            "description": "Set the proxy server for the Zoom Client",
+            "property_order": 295,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "ZRemoteControllAllApp": {
+            "title": "ZRemoteControllAllApp",
+            "description": "Remote control all applications",
+            "property_order": 300,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZSSOHost": {
+            "title": "ZSSOHost",
+            "description": "Preconfigured SSO URL",
+            "property_order": 305,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "nofacebook": {
+            "title": "nofacebook",
+            "description": "Disable Facebook login option",
+            "property_order": 310,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "enableembedbrowserforsso": {
+            "title": "enableembedbrowserforsso",
+            "description": "Launches SSO login within the app instead of using the default browser",
+            "property_order": 315,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "zdisablechat": {
+            "title": "zdisablechat",
+            "description": "Disables the group chat function in the Zoom client",
+            "property_order": 320,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZAutoJoinVoip": {
+            "title": "ZAutoJoinVoip",
+            "description": "Automatically join VoIP ",
+            "property_order": 325,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZDisableVideo": {
+            "title": "ZDisableVideo",
+            "description": "Disable Camera by default ",
+            "property_order": 330,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "disableremotecontrol": {
+            "title": "disableremotecontrol",
+            "description": "Disables Remote Control when screen sharing",
+            "property_order": 335,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "audioautoadjust": {
+            "title": "audioautoadjust",
+            "description": "Automatically adjust microphone levels",
+            "property_order": 340,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "Enable49Video": {
+            "title": "Enable49Video",
+            "description": "Enables Gallery View to display up to 49 participants per screen",
+            "property_order": 345,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "alwaysshowvideopreviewdialog": {
+            "title": "alwaysshowvideopreviewdialog",
+            "description": "Shows video preview when joining a meeting",
+            "property_order": 350,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ShowConnectedTime": {
+            "title": "ShowConnectedTime",
+            "description": "Show the length of time that the user has been in a meeting",
+            "property_order": 355,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "zdisablecmr": {
+            "title": "zdisablecmr",
+            "description": "Disables Cloud Recording from the Zoom Client ",
+            "property_order": 360,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "zdisablerecvvideo": {
+            "title": "zdisablerecvvideo",
+            "description": "Disable receiving video from the Zoom Client",
+            "property_order": 365,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        }
+	}
+}
