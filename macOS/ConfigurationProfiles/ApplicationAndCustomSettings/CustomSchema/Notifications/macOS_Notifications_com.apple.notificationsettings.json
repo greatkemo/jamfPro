@@ -1,0 +1,68 @@
+{
+    "title": "macOS Notifications (com.apple.notificationsettings)",
+    "description": "This payload specifies the restriction enforced notification settings for apps, using their bundle identifiers.",
+    "__feedback": "helpcenter@qatar.cmu.edu",
+    "properties": {
+        "NotificationSettings": {
+            "title": "Applications",
+            "description": "Specifies the restriction enforced notification settings for apps, using their bundle identifiers.",
+            "property_order": 10,
+            "type": "array",
+            "items": {
+                "title": "Application",
+                "type": "object",
+                "properties": {
+                    "BundleIdentifier": {
+                        "title": "App Bundle Identifier",
+                        "description": "Required. Bundle identifier of app to which to apply these notification settings.",
+                        "type": "string"
+                    },
+                    "NotificationsEnabled": {
+                        "title": "Allow Notifications from App",
+                        "description": "Optional. Whether notifications are allowed for this app. Default is true.",
+                        "type": "boolean"
+                    },
+                    "AlertType": {
+                        "title": "App Alert Style",
+                        "description": "Optional. The type of alert for notifications for this app.",
+                        "type": "integer",
+						"options": {
+							"enum_titles": ["None", "Banners", "Alerts"]
+						},
+						"enum": [0,1,2]
+                    },
+                    "ShowInLockScreen": {
+                        "title": "Show notifications on lock screen",
+                        "description": "Optional. Whether notifications can be shown in the lock screen. Default is true.",
+                        "type": "boolean"
+                    },
+                    "PreviewType": {
+                        "title": "Show notification preview",
+                        "description": "Optional. The type previews for notifications.",
+                        "type": "integer",
+						"options": {
+							"enum_titles": ["always", "when unlocked", "never"]
+						},
+						"enum": [0,1,2]
+                    },
+                    "ShowInNotificationCenter": {
+                        "title": "Show in Notification Center",
+                        "description": "Optional. Whether notifications can be shown in notification center. Default is true.",
+                        "type": "boolean"
+                    },
+                    "BadgesEnabled": {
+                        "title": "Badges app icon",
+                        "description": "Optional. Whether badges are allowed for this app. Default is true.",
+                        "type": "boolean"
+                    },
+                    "SoundsEnabled": {
+                        "title": "Play sound for notification",
+                        "description": "Optional. Whether sounds are allowed for this app. Default is true.",
+                        "type": "boolean"
+                    }
+                },
+			"required": ["BundleIdentifier", "NotificationsEnabled", "AlertType", "ShowInLockScreen", "ShowInNotificationCenter", "BadgesEnabled", "SoundsEnabled"]
+            }
+        }
+    }
+}
