@@ -1,1 +1,1 @@
-Placeholder for future jamfPro contributions
+Placeholder for future macOS jamfPro contributions
