@@ -1,0 +1,294 @@
+{
+	"title": "com.vmware.horizon",
+	"description": "VMware Horizon Client preferences documentation can be found here https://docs.vmware.com/en/VMware-Horizon-Client-for-Mac/5.4/horizon-client-mac-installation/GUID-93D87561-D97C-4FF9-9FC0-89957CB17B04.html",
+	"properties": {
+        "promptSharingChecked": {
+            "title": "Do not show dialog when connecting to a desktop or application",
+            "description": "Do not show dialog when connecting to a desktop or application.",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "certificateVerificationMode": {
+            "title": "Certificate checking mode",
+            "description": "Certificate checking mode. 1 = Never connect to untrusted servers, 2 = Warn before connecting to untrusted servers, 3 = Do not verify identity certificates.",
+            "property_order": 10,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": ["Never connect to untrusted servers", "Warn before connecting to untrusted servers", "Do not verify identity certificates"]
+                    },
+                    "enum": ["1", "2", "3"]
+                }
+            ]
+        },
+        "promptedUSBPrintingServicesInstall": {
+            "title": "Start remote USB print service",
+            "description": "USB: Start remote USB print service",
+            "property_order": 15,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "MaxDaysToKeepLogs": {
+            "title": "Maximum number of days to keep log files",
+            "description": "Maximum number of days to keep log files. This value has no limit.",
+            "property_order": 20,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "isSSLProxyAllowed": {
+            "title": "Allow connection via an SSL Proxy",
+            "description": "Allow connection via an SSL Proxy.",
+            "property_order": 25,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "kAllowH264": {
+            "title": "Allow H.264 decoding",
+            "description": "Allow H.264 decoding.",
+            "property_order": 30,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "promptedUpgradePrinting": {
+            "title": "Printing Enabled",
+            "description": "Printing Enabled. Remote printing is enabled on this machine.",
+            "property_order": 35,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "kAutoDownloadForUpdates": {
+            "title": "Download newly available updates in the background",
+            "description": "Download newly available updates in the background. You will be notified when the updates are ready to be installed.",
+            "property_order": 40,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "autoConnectForSingleCert": {
+            "title": "Automatically select certificate",
+            "description": "Automatically select certificate.  This feature will automatically use a local certificate on a smart card to connect.  If there are multiple certificates present this feature will not work.",
+            "property_order": 45,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "broker-history": {
+            "title": "Recent Connections",
+            "description": "Set the recent conntected to servers to e.g. https://horizon.example.com:443/broker/xml",
+            "property_order": 50,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        },
+        "kAllowRemovableStorage": {
+            "title": "Allow access to removable storage",
+            "description": "Allow access to removable storage.",
+            "property_order": 55,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "defaultBroker": {
+            "title": "Enter the name of the Connection Server",
+            "description": "Default broker server address to connect to e.g. https://horizon.example.com:443/broker/xml.  This will also set the ‘Always connect at lauch’ option.",
+            "property_order": 60,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "kNeverRememberUserADInfo": {
+            "title": "Remember username and domain",
+            "description": "Remember username and domain (true do not remember, false remember).",
+            "property_order": 65,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "MaxDebugLogs": {
+            "title": "Maximum number of log files",
+            "description": "Maximum number of log files. The maximum value is 100.",
+            "property_order": 70,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "kAllowHEVC": {
+            "title": "Allow High Efficiency Video Decoding (HVEC)",
+            "description": "Allow High Efficiency Video Decoding (HVEC).",
+            "property_order": 75,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "trustedServers": {
+            "title": "Set the trusted servers",
+            "description": "Set the trusted servers  to e.g. https://horizon.example.com:443/broker/xml",
+            "property_order": 80,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        },
+        "autoconnectOnStartup": {
+            "title": "Automatically connect at startup",
+            "description": "USB: Automatically connect at startup.",
+            "property_order": 85,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "kAllowDataSharing": {
+            "title": "Allow data sharing",
+            "description": "Allow data sharing.",
+            "property_order": 90,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "autoconnectOnInsert": {
+            "title": "Automatically connect when inserted",
+            "description": "USB: Automatically connect when inserted.",
+            "property_order": 95,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "kAutoCheckForUpdates": {
+            "title": "Automatically check for updates",
+            "description": "Automatically check for updates",
+            "property_order": 100,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "kAllowYUV444": {
+            "title": "Allow High color accuracy (reduce battery life and performance)",
+            "description": "Allow High color accuracy (reduce battery life and performance).",
+            "property_order": 105,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "kAllowConnectionsViaProxy": {
+            "title": "Allow Blast connections to use operating system proxy settings",
+            "description": "Allow Blast connections to use operating system proxy settings.",
+            "property_order": 110,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "autoHideAfterLaunched": {
+            "title": "Hide client window after desktop/application launched",
+            "description": "Hide client window after desktop/application launched.",
+            "property_order": 115,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        }
+	}
+}
