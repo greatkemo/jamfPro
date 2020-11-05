@@ -1,6 +1,6 @@
 {
 	"title": "com.vmware.horizon",
-	"description": "VMware Horizon Client preferences documentation can be found here https://docs.vmware.com/en/VMware-Horizon-Client-for-Mac/5.4/horizon-client-mac-installation/GUID-93D87561-D97C-4FF9-9FC0-89957CB17B04.html",
+	"description": "VMware Horizon Client preferences documentation at https://docs.vmware.com/en/VMware-Horizon-Client-for-Mac/5.4/horizon-client-mac-installation/GUID-93D87561-D97C-4FF9-9FC0-89957CB17B04.html",
 	"properties": {
         "promptSharingChecked": {
             "title": "Do not show dialog when connecting to a desktop or application",
@@ -192,7 +192,7 @@
         },
         "trustedServers": {
             "title": "Set the trusted servers",
-            "description": "Set the trusted servers  to e.g. https://horizon.example.com:443/broker/xml",
+            "description": "Set the trusted servers  to e.g. https://horizon.example.com:443/broker/xml.",
             "property_order": 80,
             "anyOf": [
                 {"type": "null", "title": "Not Configured"},
