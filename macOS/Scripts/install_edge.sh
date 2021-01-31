@@ -2,7 +2,7 @@
 
 script_name=$(basename "${0}")
 host_name=$(hostname -s)
-edge_download_url=$(curl -si "https://go.microsoft.com/fwlink/?linkid=2069148" | grep -i "location:" | awk '{print $2}')
+edge_download_url=$(curl -si "https://go.microsoft.com/fwlink/?linkid=2069148" | grep -i "location:" | awk '{print $2}' | tr -d '\r')
 edge_pkg_name="Microsoft_Edge.pkg"
 edge_tmp_dir=$(mktemp -d "/private/tmp/edge_$(uuidgen)")
 
