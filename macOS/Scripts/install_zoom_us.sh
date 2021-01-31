@@ -2,7 +2,7 @@
 
 script_name=$(basename "${0}")
 host_name=$(hostname -s)
-zoom_download_url=$(curl -si "https://zoom.us/client/latest/ZoomInstallerIT.pkg" | grep -i "location:" | awk '{print $2}')
+zoom_download_url=$(curl -si "https://zoom.us/client/latest/ZoomInstallerIT.pkg" | grep -i "location:" | awk '{print $2}' | tr -d '\r')
 zoom_pkg_name="zoom_us.pkg"
 zoom_tmp_dir=$(mktemp -d "/private/tmp/zoom_$(uuidgen)")
 
