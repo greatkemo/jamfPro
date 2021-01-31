@@ -2,7 +2,7 @@
 
 script_name=$(basename "${0}")
 host_name=$(hostname -s)
-office_download_url=$(curl -si "https://go.microsoft.com/fwlink/?linkid=2009112" | grep -i "location:" | awk '{print $2}')
+office_download_url=$(curl -si "https://go.microsoft.com/fwlink/?linkid=2009112" | grep -i "location:" | awk '{print $2}' | tr -d '\r')
 office_pkg_name="Microsoft_Office_BusinessPro_Installer.pkg"
 office_tmp_dir=$(mktemp -d "/private/tmp/office_$(uuidgen)")
 
