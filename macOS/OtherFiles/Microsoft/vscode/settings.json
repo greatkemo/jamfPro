@@ -1,8 +1,7 @@
 {
     "python.pythonPath": "python3",
     "python.jediEnabled": false,
-    "window.zoomLevel": 1,
     "python.languageServer": "Microsoft",
-    "redhat.telemetry.enabled": true,
+    "window.zoomLevel": 1,
     "update.mode": "none"
 }
