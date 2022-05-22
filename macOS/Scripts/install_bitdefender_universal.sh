@@ -5,7 +5,7 @@ SCRIPT_NAME=$(basename "${0}")
 HOST_NAME=$(hostname -s)
 
 BD_TEAM_ID="GUNFMW623Y"
-BD_SERVER_URL="$4"
+BD_SERVER_URL="$4" # Make sure to set this in jamf pro or change it to the server address
 BD_DOWNLOAD_ID="$5"
 BD_TEMP_DIRECTORY="$(mktemp -d "/private/tmp/$(uuidgen)_bd_downloader")"
 BD_DOWNLOADER_DMG="setup_downloader.dmg"
