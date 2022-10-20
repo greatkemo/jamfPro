@@ -1,0 +1,254 @@
+{
+	"title": "com.citrix.receiver.nomas",
+	"description": "This payload contains settings to configure citrix workspace formally known as receiver",
+	"properties": {
+        "TraceOn": {
+            "title": "Trace On",
+            "description": "",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "BITApplicationWasLaunched": {
+            "title": "BIT Application Was Launched",
+            "description": "",
+            "property_order": 10,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "AutoUpdateState": {
+            "title": "Auto Update State",
+            "description": "Used to configure Citrix Receiver Updates state. e.g. Auto, Manual, FollowSF, Disabled",
+            "property_order": 15,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "HockeySDKAutomaticallySendCrashReports": {
+            "title": "Hockey SDK Automatically Send Crash Reports",
+            "description": "",
+            "property_order": 20,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "PreferH264HardwareDecoder": {
+            "title": "Prefer H264 Hardware Decoder",
+            "description": "",
+            "property_order": 25,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "LegacyPublishedContentEnabled": {
+            "title": "Legacy Published Content Enabled",
+            "description": "",
+            "property_order": 30,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "UDPStackParameters": {
+            "title": "UDP Stack Parameters ",
+            "description": "",
+            "property_order": 35,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "SecurityAllowedTLSVersions": {
+            "title": "SecurityAllowedTLSVersions",
+            "description": "This setting specifies the TLS protocol versions that should be accepted during protocol negotiation. This information is represented as an array and any combination of the possible values is supported. When this setting is not configured, the values TLS10, TLS11 and TLS12 are used as the default values. ",
+            "property_order": 40,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "enum_titles": ["TLS10", "TLS11", "TLS12"]
+                    },
+                    "enum": ["TLS10", "TLS11", "TLS12"]
+                }
+            ]
+        },
+        "CEIPEnabled": {
+            "title": "CEIP Enabled",
+            "description": "",
+            "property_order": 45,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "HDXOverUDPAllowed": {
+            "title": "HDX Over UDP Allowed",
+            "description": "",
+            "property_order": 50,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "PreferMetalRendering": {
+            "title": "Prefer Metal Rendering",
+            "description": "",
+            "property_order": 55,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "HockeySDKCrashReportActivated": {
+            "title": "Hockey SDK Crash Report Activated",
+            "description": "",
+            "property_order": 60,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "SSLCertificateRevocationCheckPolicy": {
+            "title": "SSL Certificate Revocation Check Policy",
+            "description": "This setting governs how a given trusted root certificate authority is treated during an attempt to open a remote session through SSL. When you enable this setting, the client checks whether or not the server's certificate is revoked. Values: NoCheck, CheckWithNoNetworkAccess, FullAccessCheck, FullAccessCheckCRLRequired, FullAccessCheckCRLRequiredAll",
+            "property_order": 65,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisplaySplashScreen": {
+            "title": "Display Splash Screen",
+            "description": "",
+            "property_order": 70,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "NetDisruptBrightness": {
+            "title": "Net Disrupt Brightness",
+            "description": "Configures the greyscale brightness used for an inactive session. 100 = transparent, 0 = black",
+            "property_order": 75,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "SecurityComplianceMode": {
+            "title": "Security Compliance Mode",
+            "description": "Sets the security compliance mode for the policy. If you don't configure SecurityComplianceMode, FIPS is used as the default value. Other values None, FIPS, SP800-52",
+            "property_order": 80,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "MenuBarAutoShowDelay": {
+            "title": "Menu Bar Auto Show Delay",
+            "description": "",
+            "property_order": 85,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ]
+        },
+        "AutoUpdateRollOutBucketIndex": {
+            "title": "AutoUpdateRollOutBucketIndex",
+            "description": "Used to configure the Updates rollout period. e.g. Fast, Medium, Slow",
+            "property_order": 90,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "integer",
+                    "options": {
+                        "enum_titles": ["Fast", "Medium", "Slow"]
+                    },
+                    "enum": [0,4,9]
+                }
+            ]
+        },
+        "MenuBarAutoShowDelayEnabled": {
+            "title": "Menu Bar Auto Show Delay Enabled",
+            "description": "",
+            "property_order": 95,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "PreferFFMPEGDecoder": {
+            "title": "Prefer FFMPEG Decoder",
+            "description": "",
+            "property_order": 100,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        }
+	}
+}
