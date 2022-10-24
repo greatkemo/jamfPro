@@ -1,0 +1,342 @@
+{
+	"title": "com.macjutsu.super",
+	"description": "S.U.P.E.R.M.A.N. (or just super) is an open source script that provides administrators with a comprehensive workflow to encourage and enforce macOS software updates for both Intel and Apple silicon Mac computers. Deployed using a single script, super creates a background agent (aka LaunchDaemon) that ensures software updates are applied with the least user interference possible. Further, super can also enforce software updates with options for customizable deferrals and deadlines. In other words, super makes the macOS update experience better for both users and administrators.",
+	"properties": {
+        "TestMode": {
+            "title": "Test Mode",
+            "description": "Mode to validate super workflow options including; credentials, deferrals, deadlines, dialogs, and notifications.",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "IconSizeIbm": {
+            "title": "Icon Size Ibm",
+            "description": "Size in number of pixels for the alert icon in IBM Notifier generated dialogs and notifications. e.g. 128",
+            "property_order": 10,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "TestModeTimeout": {
+            "title": "Test Mode Timeout",
+            "description": "The amount of time in seconds to leave notifications open while in test mode. e.g. 30",
+            "property_order": 15,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "PreferJamfHelper": {
+            "title": "Prefer Jamf Helper",
+            "description": "For computers managed by Jamf Pro, prefer using jamfHelper over IBM Notifier for update dialogs and notifications.",
+            "property_order": 20,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "VerboseMode": {
+            "title": "Verbose Mode",
+            "description": "Generate additional debugging output to the command line and the super.log.",
+            "property_order": 25,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DefaultDefer": {
+            "title": "Default Defer",
+            "description": "The number of seconds to defer until the next update workflow attempt if a user choses not to update restart.",
+            "property_order": 30,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "RecheckDefer": {
+            "title": "Recheck Defer",
+            "description": "The number of seconds to defer if no software updates are found. Enabling this option results in super acting as a permanent agent that checks for software updates on a regular basis.  --recheck-defer=86400",
+            "property_order": 35,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "FocusCount": {
+            "title": "Focus Count",
+            "description": "The maximum number of automatic deferrals allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep (for example, during an active meeting). Once the focus count deadline has been met, the update restart dialogs always appear even if the user is in Focus/Do Not Disturb.",
+            "property_order": 40,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "SkipUpdates": {
+            "title": "Skip Updates",
+            "description": "Skip checking for, downloading, or installing any Apple software updates, even if they are available.",
+            "property_order": 45,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "FocusDefer": {
+            "title": "Focus Defer",
+            "description": "The number of seconds to defer automatically if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep (for example, during an active meeting).",
+            "property_order": 50,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "FocusDate": {
+            "title": "Focus Date",
+            "description": "The last date and time when automatic deferrals are allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep (for example, during an active meeting). After the focus date deadline has passed, the update restart dialogs always appear even if the user is in Focus/Do Not Disturb. e,g 2022-09-03:12:00",
+            "property_order": 55,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "HardDays": {
+            "title": "Hard Days",
+            "description": "The maximum number of days allowed before before the computer automatically restarts for updates without asking the user for approval. However, the user is notified that a restart is pending. e.g. 7",
+            "property_order": 60,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "JamfProID": {
+            "title": "Jamf Pro ID",
+            "description": "The Computers Read Jamf Pro privilege is only required by super to collect the computer's Jamf Pro ID. However, this requirement can also be fulfilled with a MDM Configuration Profile. In other words, you don't have to grant the Computers Read privileges to the Jamf Pro API account used by super if you also deploy a super MDM Configuration Profile that contains the following XML keys:  JamfProID $JSSID",
+            "property_order": 65,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "SoftDate": {
+            "title": "Soft Date",
+            "description": "The last date and time before showing the soft deadline dialog. The soft deadline is an interactive update restart dialog indicating that no more deferrals are allowed. e.g. 2022-09-05:12:00",
+            "property_order": 70,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "SoftDays": {
+            "title": "Soft Days",
+            "description": "The maximum number of deferral days allowed before showing the soft deadline dialog. The soft deadline is an interactive update restart dialog indicating that no more deferrals are allowed. e.g. 5",
+            "property_order": 75,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "FocusDays": {
+            "title": "Focus Days",
+            "description": "The maximum number of days that automatic deferrals are allowed if the system is in user-enabled Focus/Do Not Disturb or when a process has requested that the display not go to sleep (for example, during an active meeting). After the focus days deadline has passed, the update restart dialogs always appear even if the user is in Focus/Do Not Disturb. e.g. 3",
+            "property_order": 80,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "HardDate": {
+            "title": "Hard Date",
+            "description": "If this date and time have passed the computer automatically restarts for updates without asking the user for approval. However, the user is notified that a restart is pending. e.g. 2022-09-07:12:00",
+            "property_order": 85,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "HardCount": {
+            "title": "Hard Count",
+            "description": "The maximum number of user selected deferrals allowed before the computer automatically restarts for updates without asking the user for approval. However, the user is notified that a restart is pending. e.g. 5",
+            "property_order": 90,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisplayIcon": {
+            "title": "Display Icon",
+            "description": "Local path or http(s) URL to an image file that will replace the default System Settings (or System Preferences) icon in super dialogs and notifications. e.g. ‘/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns’",
+            "property_order": 95,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "MenuDefer": {
+            "title": "Menu Defer",
+            "description": "Display a deferral time pop-up menu in the non-deadline update restart dialog that allows the user to override the --default-defer time. e.g. --menu-defer=300,1800,3600,7200.",
+            "property_order": 100,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "PushMajorUpgrade": {
+            "title": "Push Major Upgrade",
+            "description": "",
+            "property_order": 105,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ZeroDay": {
+            "title": "Zero Day",
+            "description": "Instead of having the days deadline counter automatically select the day zero date, this option sets a specific date and time as day zero. Note that you need to manually update this value every time you want to set a new day zero. e.g. 2022-09-01:12:00",
+            "property_order": 110,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "PolicyTriggers": {
+            "title": "Policy Triggers",
+            "description": "The super workflow can run one or more Jamf Pro Policy Triggers that are comma separated with no spaces. e.g. Trigger1,Trigger2,Trigger3",
+            "property_order": 115,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "IconSizeJamf": {
+            "title": "Icon Size Jamf",
+            "description": "Size in number of pixels for the alert icon in jamfHelper generated dialogs and notifications. e.g. 128",
+            "property_order": 120,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisplayRedraw": {
+            "title": "Display Redraw",
+            "description": "If a user choses to ignore an interactive update restart dialog (for example, they moved it offscreen) this specifies the number of seconds to wait before closing and then reopening the dialog, thus redrawing it back to it's original open position. e.g. 60",
+            "property_order": 125,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "SoftCount": {
+            "title": "Soft Count",
+            "description": "The maximum number of user selected deferrals allowed before showing the soft deadline dialog. The soft deadline is an interactive update restart dialog indicating that no more deferrals are allowed. e.g. 5",
+            "property_order": 130,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisplayTimeout": {
+            "title": "Display Timeout",
+            "description": "Sets an automatic timeout for interactive update restart dialogs in seconds. The countdown of the timeout is displayed in the update restart dialog. e.g, 600",
+            "property_order": 135,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "ForceRestart": {
+            "title": "Force Restart",
+            "description": "The super workflow performs a system restart even if there are no restart-required Apple software updates available.",
+            "property_order": 140,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        }
+	}
+}
