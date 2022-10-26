@@ -10,23 +10,22 @@
 # for user interaction.
 #
 # Author: Kamal Taynaz
-# Date last updated: Sep, 14 2021 
+# Date last updated: Oct, 26 2021 
 #
 #
 
-# Global variable, does require any editing.
+# Global variable, do not require any editing.
 SCRIPT_NAME=$(basename "${0}")
 HOST_NAME=$(hostname -s)
 MACOS_VERSION=$(sw_vers -productVersion | sed 's/[.]/_/g')
-USER_AGENT="Mozilla/5.0 (Macintosh; Intel Mac OS X ${MACOS_VERSION}) AppleWebKit/535.6.2 (KHTML, like Gecko) Version/5.2 Safari/535.6.2"
 USER_IDLE_TIME=$(ioreg -c IOHIDSystem | awk '/HIDIdleTime/ {print int($NF/1000000000); exit}')
 ZOOM_TMP_DIRECTORY=$(mktemp -d "/private/tmp/$(uuidgen)_zoom.us")
 ZOOM_APP_PATH="/Applications/zoom.us.app"
 ZOOM_ICON_PATH="${ZOOM_APP_PATH}/Contents/Resources/ZPLogo.icns"
 ZOOM_PKG_NAME="ZoomInstallerIT.pkg"
 ZOOM_PKG_PATH="${ZOOM_TMP_DIRECTORY}/${ZOOM_PKG_NAME}"
-ZOOM_DOWNLOAD_URL=$(curl -si "https://zoom.us/client/latest/${ZOOM_PKG_NAME}" | grep -i "location:" | awk '{print $2}' | tr -d '\r')
-ZOOM_LATEST_VERSION=$(curl -s -A "${USER_AGENT}" https://zoom.us/download | grep 'ZoomInstallerIT.pkg' | awk -F'/' '{print $3}')
+ZOOM_DOWNLOAD_URL=$(curl -si "https://zoom.us/client/latest/${ZOOM_PKG_NAME}" | awk '/location: /{print $2}' | tr -d '\r')
+ZOOM_LATEST_VERSION=$(perl -pe '($_)=/([0-9]+([.][0-9]+)+)/' <<< "${ZOOM_DOWNLOAD_URL}")
 ZOOM_INSTALLED_VERSION=$(defaults read ${ZOOM_APP_PATH}/Contents/Info CFBundleVersion 2>/dev/null | sed -e 's/0 //g' -e 's/(//g' -e 's/)//g')
 
 function logger_cmd() {
