@@ -14,18 +14,22 @@ print_help() {
 
 # Print error message
 print_error() {
-  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] Error: $*" >&2
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] Error: $*" >> /Library/Logs/install_rosetta.log
+  echo "Error: $*" >&2
+  exit 1
 }
 
 # Print info message
 print_info() {
-  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] Info: $*"
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')] Info: $*" >> /Library/Logs/install_rosetta.log
+  echo "Info: $*"
 }
+
+touch /Library/Logs/install_rosetta.log
 
 #Check if macOS version is 11 or greater
 if [[ $(sw_vers -productVersion | awk -F '.' '{print $1}') -lt 11 ]]; then
   print_error "This script requires macOS 11 or greater to run. Please upgrade to macOS 11 or later."
-  exit 1
 fi
 
 # Evaluate command-line arguments
