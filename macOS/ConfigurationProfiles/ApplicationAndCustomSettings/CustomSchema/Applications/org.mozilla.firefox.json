@@ -1,0 +1,726 @@
+{
+	"title": "org.mozilla.firefox",
+	"description": "https://github.com/mozilla/policy-templates/blob/master/mac/org.mozilla.firefox.plist",
+	"properties": {
+        "DisableFirefoxAccounts": {
+            "title": "DisableFirefoxAccounts",
+            "description": "",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DefaultDownloadDirectory": {
+            "title": "DefaultDownloadDirectory",
+            "description": "e.g. ${home}/Downloads",
+            "property_order": 10,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisablePrivateBrowsing": {
+            "title": "DisablePrivateBrowsing",
+            "description": "",
+            "property_order": 15,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "OfferToSaveLogins": {
+            "title": "OfferToSaveLogins",
+            "description": "",
+            "property_order": 20,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "OverrideFirstRunPage": {
+            "title": "OverrideFirstRunPage",
+            "description": "e.g. https://www.example.com",
+            "property_order": 25,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisableAppUpdate": {
+            "title": "DisableAppUpdate",
+            "description": "",
+            "property_order": 30,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisablePasswordReveal": {
+            "title": "DisablePasswordReveal",
+            "description": "",
+            "property_order": 35,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "PrimaryPassword": {
+            "title": "PrimaryPassword",
+            "description": "",
+            "property_order": 40,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableSystemAddonUpdate": {
+            "title": "DisableSystemAddonUpdate",
+            "description": "",
+            "property_order": 45,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "OfferToSaveLoginsDefault": {
+            "title": "OfferToSaveLoginsDefault",
+            "description": "",
+            "property_order": 50,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "BlockAboutAddons": {
+            "title": "BlockAboutAddons",
+            "description": "",
+            "property_order": 55,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ExtensionUpdate": {
+            "title": "ExtensionUpdate",
+            "description": "",
+            "property_order": 60,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "PasswordManagerEnabled": {
+            "title": "PasswordManagerEnabled",
+            "description": "",
+            "property_order": 65,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisableProfileRefresh": {
+            "title": "DisableProfileRefresh",
+            "description": "",
+            "property_order": 70,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableDeveloperTools": {
+            "title": "DisableDeveloperTools",
+            "description": "",
+            "property_order": 75,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableTelemetry": {
+            "title": "DisableTelemetry",
+            "description": "",
+            "property_order": 80,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableSetDesktopBackground": {
+            "title": "DisableSetDesktopBackground",
+            "description": "",
+            "property_order": 85,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableSafeMode": {
+            "title": "DisableSafeMode",
+            "description": "",
+            "property_order": 90,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableProfileImport": {
+            "title": "DisableProfileImport",
+            "description": "",
+            "property_order": 95,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "OverridePostUpdatePage": {
+            "title": "OverridePostUpdatePage",
+            "description": "",
+            "property_order": 100,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisableFormHistory": {
+            "title": "DisableFormHistory",
+            "description": "",
+            "property_order": 105,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "BlockAboutProfiles": {
+            "title": "BlockAboutProfiles",
+            "description": "",
+            "property_order": 110,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "NetworkPrediction": {
+            "title": "NetworkPrediction",
+            "description": "",
+            "property_order": 115,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "SearchBar": {
+            "title": "SearchBar",
+            "description": "",
+            "property_order": 120,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "CaptivePortal": {
+            "title": "CaptivePortal",
+            "description": "",
+            "property_order": 125,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "SSLVersionMax": {
+            "title": "SSLVersionMax",
+            "description": "e.g. tls1.3",
+            "property_order": 130,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "AppUpdatePin": {
+            "title": "AppUpdatePin",
+            "description": "",
+            "property_order": 135,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisableForgetButton": {
+            "title": "DisableForgetButton",
+            "description": "",
+            "property_order": 140,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DownloadDirectory": {
+            "title": "DownloadDirectory",
+            "description": "e.g. ${home}/Downloads",
+            "property_order": 145,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "DisableFeedbackCommands": {
+            "title": "DisableFeedbackCommands",
+            "description": "",
+            "property_order": 150,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "RequestedLocales": {
+            "title": "RequestedLocales",
+            "description": "",
+            "property_order": 155,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        },
+        "PasswordManagerExceptions": {
+            "title": "PasswordManagerExceptions",
+            "description": "",
+            "property_order": 160,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        },
+        "DisableMasterPasswordCreation": {
+            "title": "DisableMasterPasswordCreation",
+            "description": "",
+            "property_order": 165,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisablePocket": {
+            "title": "DisablePocket",
+            "description": "",
+            "property_order": 170,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "AutoLaunchProtocolsFromOrigins": {
+            "title": "AutoLaunchProtocolsFromOrigins",
+            "description": "",
+            "property_order": 175,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        },
+        "BlockAboutSupport": {
+            "title": "BlockAboutSupport",
+            "description": "",
+            "property_order": 180,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "Select Value Type"
+                }
+            ]
+        },
+        "GoToIntranetSiteForSingleWordEntryInAddressBar": {
+            "title": "GoToIntranetSiteForSingleWordEntryInAddressBar",
+            "description": "",
+            "property_order": 185,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnterprisePoliciesEnabled": {
+            "title": "EnterprisePoliciesEnabled",
+            "description": "",
+            "property_order": 190,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "AppUpdateURL": {
+            "title": "AppUpdateURL",
+            "description": "",
+            "property_order": 195,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "ShowHomeButton": {
+            "title": "ShowHomeButton",
+            "description": "",
+            "property_order": 200,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisplayBookmarksToolbar": {
+            "title": "DisplayBookmarksToolbar",
+            "description": "",
+            "property_order": 205,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "NoDefaultBookmarks": {
+            "title": "NoDefaultBookmarks",
+            "description": "",
+            "property_order": 210,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "AppAutoUpdate": {
+            "title": "AppAutoUpdate",
+            "description": "",
+            "property_order": 215,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableFirefoxStudies": {
+            "title": "DisableFirefoxStudies",
+            "description": "",
+            "property_order": 220,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "UseSystemPrintDialog": {
+            "title": "UseSystemPrintDialog",
+            "description": "",
+            "property_order": 225,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "AllowedDomainsForApps": {
+            "title": "AllowedDomainsForApps",
+            "description": "Comma separated managedfirefox.com,example.com",
+            "property_order": 230,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "NewTabPage": {
+            "title": "NewTabPage",
+            "description": "",
+            "property_order": 235,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DontCheckDefaultBrowser": {
+            "title": "DontCheckDefaultBrowser",
+            "description": "",
+            "property_order": 240,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "Bookmarks": {
+            "title": "Bookmarks",
+            "description": "",
+            "property_order": 245,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        },
+        "HardwareAcceleration": {
+            "title": "HardwareAcceleration",
+            "description": "",
+            "property_order": 250,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "SanitizeOnShutdown": {
+            "title": "SanitizeOnShutdown",
+            "description": "",
+            "property_order": 255,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "StartDownloadsInTempDirectory": {
+            "title": "StartDownloadsInTempDirectory",
+            "description": "",
+            "property_order": 260,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableFirefoxScreenshots": {
+            "title": "DisableFirefoxScreenshots",
+            "description": "",
+            "property_order": 265,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "LocalFileLinks": {
+            "title": "LocalFileLinks",
+            "description": "",
+            "property_order": 270,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        },
+        "SSLVersionMin": {
+            "title": "SSLVersionMin",
+            "description": "e.g. tls1.2",
+            "property_order": 275,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ]
+        },
+        "BlockAboutConfig": {
+            "title": "BlockAboutConfig",
+            "description": "",
+            "property_order": 280,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "DisableBuiltinPDFViewer": {
+            "title": "DisableBuiltinPDFViewer",
+            "description": "",
+            "property_order": 285,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ExemptDomainFileTypePairsFromFileTypeDownloadWarnings": {
+            "title": "ExemptDomainFileTypePairsFromFileTypeDownloadWarnings",
+            "description": "",
+            "property_order": 290,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Entries"
+                    }
+                }
+            ]
+        }
+	}
+}
