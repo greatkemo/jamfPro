@@ -1,0 +1,18 @@
+{
+	"title": "com.apple.NetworkAuthorization",
+	"description": "Payload to manage the Connect to Server dialoq.",
+	"properties": {
+        "AllowUnknownServers": {
+            "title": "Allow Unknown Servers",
+            "description": "This key allows or disallows connecting to Unknown Servers. Default false.",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        }
+	}
+}

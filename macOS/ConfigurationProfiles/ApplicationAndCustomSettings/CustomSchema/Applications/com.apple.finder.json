@@ -1,0 +1,114 @@
+{
+	"title": "com.apple.finder",
+	"description": "The payload for configuring Finder settings.",
+	"properties": {
+        "ShowExternalHardDrivesOnDesktop": {
+            "title": "Show External Hard Drives On Desktop",
+            "description": "If false, external hard drives don’t appear on the Desktop. Default: true",
+            "property_order": 5,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "WarnOnEmptyTrash": {
+            "title": "Warn On Empty Trash",
+            "description": "If false, the user isn’t warned before emptying the trash. Default: true",
+            "property_order": 10,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ShowMountedServersOnDesktop": {
+            "title": "Show Mounted Servers On Desktop",
+            "description": "If false, mounted file servers don’t appear on the Desktop. Default: false",
+            "property_order": 15,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ShowHardDrivesOnDesktop": {
+            "title": "Show Hard Drives On Desktop",
+            "description": "If false, internal hard drives don’t appear on the Desktop. Default: false",
+            "property_order": 20,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "Prohibit Eject": {
+            "title": "Prohibit Eject",
+            "description": "If true, the system disables Eject. Default: false",
+            "property_order": 25,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ShowRemovableMediaOnDesktop": {
+            "title": "Show Removable Media On Desktop",
+            "description": "If false, removable media items don’t appear on the Desktop. Default: true",
+            "property_order": 30,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ProhibitBurn": {
+            "title": "Prohibit Burn",
+            "description": "If true, the system disables the Finder’s burn support. Default: false",
+            "property_order": 35,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ProhibitGoToFolder": {
+            "title": "Prohibit Go To Folder",
+            "description": "If true, the system disables Go to Folder. Default: false",
+            "property_order": 40,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "ProhibitConnectTo": {
+            "title": "Prohibit Connect To",
+            "description": "If true, the system disables Connect to Server. Default: false",
+            "property_order": 45,
+            "anyOf": [
+                {"type": "null", "title": "Not Configured"},
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        }
+	}
+}
