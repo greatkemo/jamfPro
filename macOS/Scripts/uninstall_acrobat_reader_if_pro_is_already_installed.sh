@@ -140,9 +140,14 @@ if [ -d "/Applications/Adobe Acrobat DC/Adobe Acrobat.app" ]; then
     log_message "Adobe Acrobat Pro is installed."
     if [ -d "/Applications/Adobe Acrobat Reader.app" ]; then
         log_message "Adobe Acrobat Reader is installed."
-        if check_swiftdialog && pgrep -x "Acrobat Reader" > /dev/null && [ "$(get_user_idle_time)" -lt 300 ]; then
-            log_message "Running display_prompt() function..."
-            display_prompt
+        if check_swiftdialog && [ "$(get_user_idle_time)" -lt 300 ]; then
+            if pgrep -x "Acrobat Reader" > /dev/null ; then
+                log_message "Acrobat Reader is running. Prompting user to quit."
+                log_message "Running display_prompt() function..."
+                display_prompt
+            else
+                log_message "Acrobat Reader is not running. Skipping prompt."
+            fi     
             log_message "Running uninstall_acrobat_reader() function..."
             uninstall_acrobat_reader
             log_message "Adobe Acrobat Reader has been uninstalled after user confirmation or timeout."
